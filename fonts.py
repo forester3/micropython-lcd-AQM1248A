@@ -4,6 +4,7 @@
 # Written by forester3,
 #   based on http://www.picfun.com/PIC32MX/font.zip
 #
+# 30.May.2018 update 0xB9
 # This software is released under the MIT License, see LICENSE
 #
 ###############################################################
@@ -161,7 +162,7 @@ font =  \
 	b'\x42\x3f\x02\x42\x3e',    # カ  0xB6
 	b'\x0a\x0a\x7f\x0a\x0a',    # キ  0xB7	    
 	b'\x08\x46\x42\x22\x1e',    # ク  0xB8
-	b'\x04\x03\x42\x3e\x04',    # ケ  0xB9		 
+	b'\x04\x03\x42\x3e\x02',    # ケ  0xB9		 
 	b'\x42\x42\x42\x42\x7e',    # コ  0xBA
 	b'\x02\x4f\x22\x1f\x02',    # サ  0xBB	    
 	b'\x4a\x4a\x40\x20\x1c',    # シ  0xBC
