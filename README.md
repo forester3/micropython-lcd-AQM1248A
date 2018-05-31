@@ -17,7 +17,7 @@ Displayed medium font size is 10x14.
     lcd.write( 'Hello, AQM1248A !' )
     lcd.text('Micro', 12, 2)  
 
-In test() method, the page number is only even number.  
+In text() method, the page number is only even number.  
 (column = 12, page =2) means to display a medium size font on the 2nd column of the 2nd line.
 
 ## Usage
@@ -40,6 +40,6 @@ lcd = AQM1248_ChrLcd.ChrLcd( sspi, cs_pin=2, rs_pin=15 )
 lcd.clear()
 lcd.text( 'Hello, World !!', 3, 3 )
 ~~~
-### usage of test() method  
-    The second argument is column, the range is from 0 to 128.  
-    The third argument is page, the range is form 0 to 5.
+### usage of text() method  
+The second argument is column, the range is from 0 to 128.  
+The third argument is page, the range is form 0 to 5.
