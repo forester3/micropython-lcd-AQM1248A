@@ -8,15 +8,15 @@ Displayed medium font size is 10x14.
 
 
 ### Usage
-
-    import machine
-    import aqm1248midchrlcd
-    hspi = machine.SPI(1)
-    lcd = aqm1248midchrlcd.MidChrLcd( hspi, cs_pin=2, rs_pin=15 )
-    lcd.clear()
-    lcd.write( 'Hello, AQM1248A !' )
-    lcd.text('Micro', 12, 2)  
-
+~~~
+import machine
+import aqm1248midchrlcd
+hspi = machine.SPI(1)
+lcd = aqm1248midchrlcd.MidChrLcd( hspi, cs_pin=2, rs_pin=15 )
+lcd.clear()
+lcd.write( 'Hello, AQM1248A !' )
+lcd.text('Micro', 12, 2)  
+~~~
 In text() method, the page number is only even number.  
 (column = 12, page =2) means to display a medium size font on the 2nd column of the 2nd line.
 
