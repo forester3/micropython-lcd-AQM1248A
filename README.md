@@ -2,11 +2,23 @@
 A character display class for controlling the mini graphic LCD AQM1248A with the micropython esp8266.
 
 There are one external dependences, it is **"machine"** class.
-## New module aqm1248midchrlcd
+
+## New module aqm1248largechrlcd  
+
+Displayed large font size is 15x21.
+### Usage
+~~~
+import machine
+import aqm1248largechrlcd
+hspi = machine.SPI(1)
+lcd = aqm1248largechrlcd.LargeChrLcd( hspi, cs_pin=2, rs_pin=15 )
+lcd.clear()
+lcd.write( 'Micro\n' )
+lcd.write( 'Python' )  
+~~~
+## Second module aqm1248midchrlcd
 
 Displayed medium font size is 10x14.  
-
-
 ### Usage
 ~~~
 import machine
