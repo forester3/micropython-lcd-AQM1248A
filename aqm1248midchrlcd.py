@@ -104,7 +104,7 @@ class MidChrLcd:
         self.lcd_cmd( bytearray([0x10 + (c >> 4)]) )
         self.lcd_cmd( bytearray([0x00 + (c & 0x0f)]) )
 
-    def set_start_ine(self, start):
+    def set_start_line(self, start):
         if start < 0:
             start = 0
         elif start > MAX_LINE:
@@ -137,7 +137,7 @@ class MidChrLcd:
             self.scroll = True
             if self.start_line > MAX_LINE:
                 self.start_line %= (MAX_LINE+1)
-            self.set_start_ine( self.start_line )
+            self.set_start_line( self.start_line )
 
     def put_char(self, h: int, color=1):
         if h == 0x0A:
@@ -273,7 +273,7 @@ class MidChrLcd:
                     self.lcd_data( b'\x00\x00\x00\x00\x00\x00' )
         self.set_page(0)
         self.set_col(0)
-        self.set_start_ine(0)
+        self.set_start_line(0)
 
     def clear(self):
         self.fill(0)
